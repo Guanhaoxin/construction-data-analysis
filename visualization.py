@@ -4,7 +4,9 @@ from sqlalchemy import create_engine
 import os
 
 # 1. 连接 MySQL
-engine = create_engine('mysql+pymysql://root:Ghx2005101.@localhost/construction_db')
+password = input("请输入 MySQL root 密码: ")
+engine = create_engine(f'mysql+pymysql://root:{password}@localhost/construction_db')
+
 
 # 2. 创建输出文件夹
 if not os.path.exists('output'):
