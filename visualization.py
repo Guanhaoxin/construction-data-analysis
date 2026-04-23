@@ -7,7 +7,6 @@ import os
 password = input("请输入 MySQL root 密码: ")
 engine = create_engine(f'mysql+pymysql://root:{password}@localhost/construction_db')
 
-
 # 2. 创建输出文件夹
 if not os.path.exists('output'):
     os.makedirs('output')

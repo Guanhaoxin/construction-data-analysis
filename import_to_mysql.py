@@ -1,7 +1,9 @@
 import pandas as pd
 from sqlalchemy import create_engine
 
+# 运行时输入密码，避免硬编码泄露
 password = input("请输入 MySQL root 密码: ")
+
 df = pd.read_csv('projects.csv')
 engine = create_engine(f'mysql+pymysql://root:{password}@localhost/construction_db')
 df.to_sql('projects', engine, if_exists='replace', index=False)
