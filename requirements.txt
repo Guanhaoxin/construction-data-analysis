@@ -1,0 +1,6 @@
+pandas>=1.5.0
+numpy>=1.21.0
+pymysql>=1.0.0
+SQLAlchemy>=1.4.0
+matplotlib>=3.5.0
+cryptography>=3.0.0
